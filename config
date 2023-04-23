@@ -4,7 +4,6 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:DejaVu Sans Mono 12
 
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:
@@ -29,7 +28,6 @@ exec --no-startup-id nm-applet
 
 # feh wallpaper
 exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
-
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -57,13 +55,6 @@ bindsym $mod+Shift+w exec firefox
 # kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -175,6 +166,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# start dmenu (a program launcher)
+bindsym $mod+p exec dmenu_run -fn 'DejaVu Sans Mono-15' -nb '#1E2030' -sf '#1E2030' -sb '#82AAFF' -nf '#82AAFF' 
+# A more modern dmenu replacement is rofi:
+# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+# There also is i3-dmenu-desktop which only displays applications shipping a
+# .desktop file. It is a wrapper around dmenu, so you need that installed.
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
 # window colortheme
 for_window [class="^.*"] border pixel 1
 client.focused           #565f89 #343b58 #c0caf5 #16161d  #16161d
@@ -183,15 +182,14 @@ client.unfocused         #16161d #16161d #c0caf5 #16161d  #16161d
 client.urgent           #2f343a #900000 #ffffff #900000  #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000  #0c0c0c
 
-
 bar {
  colors {
         background #1E2030
         statusline #82AAFF 
         separator #FFC777 
-				focused_workspace #82AAFF #565f89 #FFC777
+				focused_workspace #82AAFF #1E2030 #FFC777
 				active_workspace #333333 #333333 #888888
-				inactive_workspace #565f89 #565f89 #82AAFF 
+				inactive_workspace #565f89 #1E2030 #82AAFF 
 				urgent_workspace #eb709b #eb709b #565f89 
     }
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
