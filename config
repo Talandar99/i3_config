@@ -167,7 +167,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run -fn 'DejaVu Sans Mono-15' -nb '#1E2030' -sf '#1E2030' -sb '#82AAFF' -nf '#82AAFF' 
+bindsym $mod+p exec dmenu_run -fn 'DejaVu Sans Mono-15' -nb '#1E2030' -sf '#1E2030' -sb '#FFC777' -nf '#FFC777' 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
