@@ -51,6 +51,8 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec alacritty
 # start a browser
 bindsym $mod+Shift+w exec firefox
+# flameshot
+bindsym $mod+Shift+s exec flameshot gui
 
 # kill focused window
 bindsym $mod+q kill
