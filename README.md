@@ -12,7 +12,8 @@ this repo contain my configuration files for i3
 - i3status 
 - i3lock 
 - i3blocks 
-- dmenu
+- dmenu (searching menu)
+- pamixer (volume)
 - feh (wallpaper)
 - xcompmgr (terminal transparency)
 - alacritty (default terminal)
