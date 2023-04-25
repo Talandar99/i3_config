@@ -12,6 +12,7 @@ this repo contain my configuration files for i3
 - i3status 
 - i3lock 
 - i3blocks 
+- dunst (notificaiton manager)
 - flameshot (screenshot)
 - dmenu (searching menu)
 - pamixer (volume)
