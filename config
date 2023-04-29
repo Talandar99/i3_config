@@ -181,13 +181,35 @@ bindsym $mod+p exec dmenu_run -fn 'DejaVu Sans Mono-15' -nb '#1E2030' -sf '#1E20
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-# window colortheme
 for_window [class="^.*"] border pixel 1
-client.focused           #565f89 #343b58 #c0caf5 #16161d  #16161d
-client.focused_inactive  #16161d #16161d #c0caf5 #16161d  #16161d
-client.unfocused         #16161d #16161d #c0caf5 #16161d  #16161d
-client.urgent           #2f343a #900000 #ffffff #900000  #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000  #0c0c0c
+# window colortheme
+#palette
+#1E2030 <
+#32344a
+#444b6a
+#565f89 <
+#ff7a93
+#f7768e
+#b9f27c
+#9ece6a
+#ff9e64
+#e0af68
+#FFC777 <
+#c0caf5
+#7da6ff
+#7aa2f7
+#82AAFF <
+#bb9af7
+#ad8ee6
+#0db9d7
+#449dab
+#ffffff
+# colors 									border 	backgr. text   	indic.   child_border
+client.focused           	#82AAFF #1E2030 #FFC777 #1E2030  #1E2030 
+client.focused_inactive  	#82AAFF #1E2030 #82AAFF #1E2030  #1E2030 
+client.unfocused         	#565f89 #1E2030 #82AAFF #1E2030  #1E2030 
+client.urgent           	#2f343a #FFC777 #1E2030 #FFC777  #1E2030 
+client.placeholder      	#000000 #0c0c0c #1E2030 #000000  #1E2030 
 
 bar {
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
@@ -196,15 +218,11 @@ bar {
  	colors {
       background #1E2030
       statusline #82AAFF 
-      separator #FFC777 
+      separator #565f89 
 			focused_workspace #82AAFF #1E2030 #FFC777
 			active_workspace #333333 #333333 #888888
 			inactive_workspace #565f89 #1E2030 #82AAFF 
 			urgent_workspace #FFC777 #1E2030 #FFC777 
   }
 }
-#palette
-#1E2030
-#82AAFF
-#FFC777
-#565f89
+
