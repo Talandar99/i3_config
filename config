@@ -80,12 +80,12 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-# TODO split
+
 # split in horizontal orientation
-#bindsym $mod+h split h
+bindsym $mod+Shift+apostrophe split h; exec notify-send "i3" "Changed split mode: Horizontal"
 
 # split in vertical orientation
-#bindsym $mod+v split v
+bindsym $mod+Shift+slash split v; exec notify-send "i3" "Changed split mode: Vertical"
 
 
 # TODO layout mode 
@@ -110,16 +110,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Terminal "
-set $ws2 "2: Firefox "
-set $ws3 "3: Spotify "
-set $ws4 "4: General "
-set $ws5 "5: Discord "
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1: Terminal  "
+set $ws2 "2: Firefox  "
+set $ws3 "3: Spotify  "
+set $ws4 "4: General  "
+set $ws5 "5: General  "
+set $ws6 "6: General  "
+set $ws7 "7: General  "
+set $ws8 "8: General  "
+set $ws9 "9: Notes  "
+set $ws10 "10: Comms  "
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
