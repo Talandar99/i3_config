@@ -13,6 +13,7 @@ exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
 exec killall -q notify-osd
 exec --no-startup-id dunst -config ~/.config/i3/dunstrc
 
+exec betterlockscreen -u ~/.config/i3/wallpaper.jpg
 # transparent terminal
 exec --no-startup-id xcompmgr &
 
@@ -53,7 +54,6 @@ tiling_drag modifier titlebar
 ##############################################################
 # applications shortkeys
 ##############################################################
-#xprop
 # start a terminal
 bindsym $mod+Return exec alacritty
 # start firefox
@@ -61,12 +61,6 @@ bindsym $mod+Shift+w exec firefox
 # flameshot
 bindsym $mod+Shift+s exec flameshot gui
 
-# assign applications to workspace
-for_window [class="firefox"] move to workspace $ws2
-for_window [class="Spotify"] move to workspace $ws3
-for_window [class="Steam"] move to workspace $ws4
-for_window [class="Signal"] move to workspace $ws5
-for_window [class="discord"] move to workspace $ws5
 
 # kill focused window
 bindsym $mod+q kill
@@ -107,6 +101,15 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+#xprop
+# assign applications to workspace
+for_window [class="firefox"] move to workspace $ws2
+for_window [class="Spotify"] move to workspace $ws3
+for_window [class="Steam"] move to workspace $ws4
+for_window [class="Joplin"] move to workspace $ws9
+for_window [class="Signal"] move to workspace $ws10
+for_window [class="discord"] move to workspace $ws10
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -151,7 +154,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 mode "system"{
-	bindsym l exec i3lock -c 000000
+	bindsym l exec betterlockscreen -l --off 300
 	bindsym q exit i3
 	bindsym Escape mode "default"
 	bindsym $mod+e mode "default"

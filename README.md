@@ -9,7 +9,7 @@ this repo contain my configuration files for i3
 
 ## Dependancies:
 - i3wm 
-- i3lock (lock-screen)
+- betterlockscreen (lock-screen)
 - i3blocks (status bar)
 - dunst (notificaiton manager)
 - flameshot (screenshot)
