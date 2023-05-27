@@ -16,6 +16,7 @@ this repo contain my configuration files for i3
 - dmenu (searching menu)
 - pamixer (volume)
 - feh (wallpaper)
+- xclip (clipboard manager)
 - xcompmgr (terminal transparency)
 - alacritty (default terminal)
 - firefox (default browser)
