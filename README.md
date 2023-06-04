@@ -13,6 +13,7 @@ this repo contain my configuration files for i3
 - i3blocks (status bar)
 - dunst (notificaiton manager)
 - flameshot (screenshot)
+- palyerctl (controlling multimedia)
 - dmenu (searching menu)
 - pamixer (volume)
 - feh (wallpaper)
