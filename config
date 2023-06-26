@@ -181,7 +181,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run -fn 'FiraCode Nerd Font Mono-15' -nb '#1E2030' -sf '#1E2030' -sb '#FFC777' -nf '#FFC777' 
+bindsym $mod+p exec dmenu_run -fn 'FiraCode Nerd Font Mono-185' -nb '#1E2030' -sf '#1E2030' -sb '#FFC777' -nf '#FFC777' 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -224,7 +224,7 @@ client.placeholder      	#000000 #0c0c0c #1E2030 #565f89  #565f89
 bar {
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position top
-
+    padding 2px 0
  	colors {
 		background #1E2030
 		statusline #82AAFF 
