@@ -14,7 +14,7 @@ this repo contain my configuration files for i3
 - dunst (notificaiton manager)
 - flameshot (screenshot)
 - palyerctl (controlling multimedia)
-- dmenu (searching menu)
+- rofi (searching menu)
 - pamixer (volume)
 - feh (wallpaper)
 - xclip (clipboard manager)
