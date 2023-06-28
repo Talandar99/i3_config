@@ -80,4 +80,3 @@ prompt {
   text-color: @fg;
 }
 
-/* vim: ft=sass
