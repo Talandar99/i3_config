@@ -181,7 +181,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec rofi -config ~/.config/i3/config.rasi -show drun
+bindsym $mod+p exec rofi -config ~/.config/i3/config.rasi -show combi
 # bindsym $mod+p exec dmenu_run -fn 'FiraCode Nerd Font Mono-18' -nb '#1E2030' -sf '#1E2030' -sb '#FFC777' -nf '#FFC777' 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
