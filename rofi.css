@@ -1,0 +1,101 @@
+configuration {
+  display-drun: "applications:";
+  display-window: "windows:";
+  drun-display-format: "{name}";
+  font: "FiraCode Nerd Font Mono 13";
+  modi: "window,run,drun";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #1E2030;
+  bg-alt: #1E2030;
+  bg-selected: #82AAFF;
+
+  fg: #FFC777;
+  fg-alt: #82AAFF;
+
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 100%;
+  background-color: @bg;
+  location:north;
+  anchor:  north;
+  children:                    [ horibox ];
+}
+/*****----- Horizontal Box -----*****/
+horibox {
+    spacing:                     0px;
+    background-color: @bg-alt;
+    border-color: @fg-alt;
+    border-color: @fg-alt;
+    border: 0px 0px 1px 0px solid;
+    orientation:                 horizontal;
+    children:                    ["entry", "listview" ];
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       100;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      horizontal;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @border-colour;
+    background-color:            transparent;
+    text-color:                  @foreground-colour;
+    cursor:                      "default";
+}
+
+entry {
+    background-color: @bg;
+    enabled:                     true;
+    padding:                     2px 5px;
+    expand:                      false;
+    width:                       8em;
+    cursor:                      text;
+    placeholder:                 "search...";
+    placeholder-color:           @fg;
+    text-color: @fg;
+}
+element {
+  padding: 2px 10px;
+  background-color: transparent;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @bg;
+  background-color: @bg-selected;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 14;
+  padding: 0 10 0 0;
+  background-color: transparent;
+}
+
