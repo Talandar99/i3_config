@@ -85,6 +85,8 @@ element {
 element selected {
   text-color: @fg-alt;
   background-color: @bg;
+  border: 1px 1px solid;
+  border-color: @silver;
 }
 
 element-text {
