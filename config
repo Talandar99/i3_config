@@ -60,10 +60,12 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+w exec firefox
 # flameshot
 bindsym $mod+Shift+s exec flameshot gui
-#  Command the player to skip to the next track
+# Command the player to skip to the next track
 bindsym $mod+bracketright exec playerctl next
-#  Command the player to skip to the previous track
+# Command the player to skip to the previous track
 bindsym $mod+bracketleft exec playerctl previous
+# Command the player to play/pause the current track 
+bindsym $mod+backslash exec playerctl play-pause
 
 # kill focused window
 bindsym $mod+q kill
