@@ -41,14 +41,14 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 #sound control
-bindsym $mod+period exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym $mod+comma exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym $mod+period exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status; exec notify-send "VOL+5" "Volume=$(pamixer --get-volume)%"
+bindsym $mod+comma exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status; exec notify-send "VOL-5" "Volume=$(pamixer --get-volume)%"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+# tiling_drag modifier titlebar
 
 
 ##############################################################
@@ -193,10 +193,10 @@ bindsym $mod+p exec rofi -config ~/.config/i3/rofi.css -show combi
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 for_window [class="^.*"] border pixel 3
-hide_edge_borders both
+hide_edge_borders smart
+smart_gaps on
 gaps outer 15px
 gaps inner 15px
-smart_gaps on
 # window colortheme
 #palette
 #1E2030 <
