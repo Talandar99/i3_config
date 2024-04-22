@@ -81,10 +81,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+s split v; exec notify-send "i3" "Changed split mode: Horizontal"
+bindsym $mod+apostrophe split v; exec notify-send "i3" "Changed split mode: Horizontal"
 
 # split in vertical orientation
-bindsym $mod+v split h; exec notify-send "i3" "Changed split mode: Vertical"
+bindsym $mod+slash split h; exec notify-send "i3" "Changed split mode: Vertical"
 
 
 # TODO layout mode 
