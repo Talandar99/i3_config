@@ -18,7 +18,7 @@ this repo contain my configuration files for i3
 - pamixer (volume)
 - feh (wallpaper)
 - xclip (clipboard manager)
-- xcompmgr (terminal transparency)
+- xcompmgr and picom (terminal transparency)
 - alacritty (default terminal)
 - firefox (default browser)
 - ttf-font-awesome (icon fonts) 
