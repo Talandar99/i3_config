@@ -41,8 +41,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 #sound control
-bindsym $mod+w exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status; exec notify-send "VOL+5" "Volume=$(pulsemixer --get-volume 0)%"
-bindsym $mod+s exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status; exec notify-send "VOL-5" "Volume=$(pulsemixer --get-volume 0)%"
+bindsym $mod+w exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status; exec notify-send "VOL+5" "Volume=$(pulsemixer --get-volume | cut -d' ' -f1)%"
+bindsym $mod+s exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status; exec notify-send "VOL-5" "Volume=$(pulsemixer --get-volume | cut -d' ' -f1)%"
 # Command the player to skip to the next track
 bindsym $mod+x exec playerctl next
 # Command the player to skip to the previous track
