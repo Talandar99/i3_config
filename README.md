@@ -14,7 +14,7 @@ this repo contain my configuration files for i3
 - dunst (notificaiton manager)
 - flameshot (screenshot)
 - pulsaudio (sound)
-  - pamixer (volume)
+  - pulsemixer (volume)
   - playerctl (controlling multimedia)
 - rofi (searching menu)
 - feh (wallpaper)
