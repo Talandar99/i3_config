@@ -41,8 +41,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 #sound control
-bindsym $mod+w exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status; exec notify-send "VOL+5" "Volume=$(pamixer --get-volume)%"
-bindsym $mod+s exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status; exec notify-send "VOL-5" "Volume=$(pamixer --get-volume)%"
+bindsym $mod+w exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status; exec notify-send "VOL+5" "Volume=$(pulsemixer --get-volume 0)%"
+bindsym $mod+s exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status; exec notify-send "VOL-5" "Volume=$(pulsemixer --get-volume 0)%"
 # Command the player to skip to the next track
 bindsym $mod+x exec playerctl next
 # Command the player to skip to the previous track
@@ -112,12 +112,14 @@ bindsym $mod+a focus parent
 # assign applications to workspace
 for_window [class="firefox"] move to workspace $ws2
 for_window [class="Spotify"] move to workspace $ws3
+for_window [class="Audacious"] move to workspace $ws3
 for_window [class="Steam"] move to workspace $ws4
 for_window [class="steam"] move to workspace $ws4
 for_window [class="Double Commander"] move to workspace $ws9
 for_window [class="Gimp"] move to workspace $ws8
 for_window [class="Signal"] move to workspace $ws10
 for_window [class="discord"] move to workspace $ws10
+for_window [class="WebCord"] move to workspace $ws10
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
