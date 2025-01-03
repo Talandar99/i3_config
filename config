@@ -9,6 +9,8 @@ exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 
+# polkit
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 #notifications
 exec killall -q notify-osd
 exec --no-startup-id dunst -config ~/.config/i3/dunstrc
