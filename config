@@ -69,7 +69,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec alacritty
 # start firefox
-bindsym $mod+Shift+w exec firefox
+bindsym $mod+Shift+w exec librewolf-bin
 # flameshot
 bindsym $mod+Shift+s exec flameshot gui
 
@@ -141,7 +141,7 @@ for_window [class="Signal"] move to workspace $ws10
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminal  "
-set $ws2 "2: Firefox  "
+set $ws2 "2: LibreWolf  "
 set $ws3 "3: Music  "
 set $ws4 "4: Games  "
 set $ws5 "5: General  "
