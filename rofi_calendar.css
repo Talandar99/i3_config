@@ -1,0 +1,69 @@
+configuration {
+  disable-entry: true;
+  font: "FiraCode Nerd Font Mono 15";
+}
+
+@theme "/dev/null"
+
+* {
+    bg: #1E2030;
+    bg-alt: #1E2030;
+    bg-selected: #82AAFF;
+    fg: #FFC777;
+    fg-alt: #82AAFF;
+    border-colour: #FFC777;
+    silver: #565f89;
+
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+
+  background-color: @bg;
+  anchor:  north;
+  location: north;
+  margin:                      50px;
+  children:                    [ listview ];
+}
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       false;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               false;
+    
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     20px 45px;
+    border:                      1px solid;
+    border-radius:               0px;
+    border-color:                @border-colour;
+    background-color:            transparent;
+    text-color:                  @foreground-colour;
+    cursor:                      "default";
+}
+
+element {
+    
+  padding: 0px 0px;
+  background-color: transparent;
+  text-color: @fg-alt;
+}
+
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+}
+
+
