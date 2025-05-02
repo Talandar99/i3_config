@@ -3,6 +3,6 @@
 THEME_PATH="$HOME/.config/i3/rofi_calendar.css"
 
 if [[ -n "$BLOCK_BUTTON" ]]; then
-            cal -m -3 -S | rofi -dmenu -theme "$THEME_PATH" 
+    cal -m -3 -S | rofi -dmenu -theme "$THEME_PATH" 
 fi
 date '+%Y-%m-%d'
