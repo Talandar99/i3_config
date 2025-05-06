@@ -72,6 +72,10 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+w exec librewolf-bin
 # flameshot
 bindsym $mod+Shift+s exec flameshot gui
+# thunar 
+bindsym $mod+Shift+t exec thunar  
+# python shell
+bindsym $mod+Shift+p exec alacritty -e python
 
 # kill focused window
 bindsym $mod+q kill
