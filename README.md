@@ -24,3 +24,4 @@ this repo contain my configuration files for i3
 - firefox (default browser)
 - ttf-font-awesome (icon fonts) 
 - FiraCode Nerd Font Mono (font)
+- i3ipc - python script that move window into focused workspace
