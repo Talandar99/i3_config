@@ -69,15 +69,21 @@ floating_modifier $mod
 # applications shortkeys
 ##############################################################
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return             exec alacritty
 # start firefox
-bindsym $mod+Shift+w exec librewolf-bin
+bindsym $mod+Shift+w            exec librewolf-bin
 # flameshot
-bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+s            exec flameshot gui
 # thunar 
-bindsym $mod+Shift+t exec thunar  
+bindsym $mod+Shift+t            exec thunar  
 # python shell
-bindsym $mod+Shift+p exec alacritty -e python
+bindsym $mod+Shift+p            exec alacritty -e python
+# run steam
+bindsym $mod+Shift+g            exec steam -system-composer
+# run signal 
+bindsym $mod+Shift+bracketleft  exec signal-desktop
+# run discord
+bindsym $mod+Shift+bracketright exec discord
 
 # kill focused window
 bindsym $mod+q kill
