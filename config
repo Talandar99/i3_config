@@ -229,7 +229,7 @@ bindsym $mod+backslash exec rofi -config ~/.config/i3/rofi.css -show combi
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 4
 # borderless Audacious
 for_window [class="Audacious"] border pixel 0
 
@@ -260,23 +260,26 @@ gaps inner 15px
 #449dab
 #ffffff
 # colors					border 	backgr. text   	indic.   child_border
-client.focused           	#82AAFF #1E2030 #FFC777 #7aa2f7  #7aa2f7 
-client.focused_inactive  	#82AAFF #1E2030 #82AAFF #565f89  #565f89 
-client.unfocused         	#565f89 #1E2030 #82AAFF #565f89  #565f89 
-client.urgent           	#2f343a #FFC777 #1E2030 #FFC777  #FFC777 
-client.placeholder      	#000000 #0c0c0c #1E2030 #565f89  #565f89 
+client.focused           	#82AAFF #1E2030 #FFC777 #7aa2f7  #7aa2f790 
+client.focused_inactive  	#82AAFF #1E2030 #82AAFF #565f89  #565f8950 
+client.unfocused         	#565f89 #1E2030 #82AAFF #565f89  #565f8950 
+client.urgent           	#2f343a #FFC777 #1E2030 #FFC777  #FFC77750
+client.placeholder      	#000000 #0c0c0c #1E2030 #565f89  #565f8950 
 bar {
+    i3bar_command i3bar --transparency
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position top
     padding 2px 0
  	colors {
-		background #1E2030
-		statusline #82AAFF 
-		separator #565f89 
+                    #1E203000
+        background  #00000000
+		statusline #82AAFF
+		separator #565f89
 		focused_workspace #82AAFF #1E2030 #FFC777
 		active_workspace #333333 #333333 #888888
 		inactive_workspace #565f89 #1E2030 #82AAFF 
 		urgent_workspace #FFC777 #1E2030 #FFC777 
+
   	}
 }
 # no screen saving

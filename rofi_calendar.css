@@ -6,8 +6,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-    bg: #1E2030;
-    bg-alt: #1E2030;
+    bg: #1E203080;
+    bg-alt: #1E203080;
     bg-selected: #82AAFF;
     fg: #FFC777;
     fg-alt: #82AAFF;
@@ -26,7 +26,10 @@ window {
   background-color: @bg;
   anchor:  north;
   location: north;
-  margin:                      50px;
+  padding:                       0px 50px;
+  border:                        1px solid;
+  border-radius:                 0px;
+  border-color:                  @border-colour;
   children:                    [ listview ];
 }
 /*****----- Listview -----*****/
@@ -45,9 +48,6 @@ listview {
     spacing:                     0px;
     margin:                      0px;
     padding:                     20px 45px;
-    border:                      1px solid;
-    border-radius:               0px;
-    border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
     cursor:                      "default";
